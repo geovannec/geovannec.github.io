@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es-419" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lo que sale de tu computadora: la tabla de egress — Sovereign Social</title>
+<meta name="description" content="La privacidad no es una promesa — es un inventario. Cada salida de red de la app vive en una tabla generada del código, y el sitio la muestra.">
+<link rel="canonical" href="https://geovannec.github.io/es-419/blog/p/tabela-egress/"><link rel="alternate" hreflang="pt-BR" href="https://geovannec.github.io/pt-BR/blog/p/tabela-egress/"><link rel="alternate" hreflang="en-US" href="https://geovannec.github.io/en-US/blog/p/tabela-egress/"><link rel="alternate" hreflang="es-419" href="https://geovannec.github.io/es-419/blog/p/tabela-egress/"><link rel="alternate" hreflang="x-default" href="https://geovannec.github.io/pt-BR/blog/p/tabela-egress/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lo que sale de tu computadora: la tabla de egress — Sovereign Social">
+<meta property="og:description" content="La privacidad no es una promesa — es un inventario. Cada salida de red de la app vive en una tabla generada del código, y el sitio la muestra.">
+<meta property="og:url" content="https://geovannec.github.io/es-419/blog/p/tabela-egress/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Changelog" href="https://geovannec.github.io/feed.atom">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Blog" href="https://geovannec.github.io/es-419/blog.atom"></head>
+<body>
+<input type="checkbox" id="retro-toggle" class="retro-toggle" aria-hidden="true">
+<div class="site">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="nav-brand" href="/es-419/">Sovereign&nbsp;Social</a>
+    <ul class="nav-links">
+      <li><a href="/es-419/demo/">Demo</a></li>
+      <li><a href="/es-419/manifesto/">Manifiesto</a></li>
+      <li><a href="/es-419/privacy/">Privacidad</a></li>
+      <li><a href="/es-419/security/">Seguridad</a></li>
+      <li><a href="/es-419/governance/">Gobernanza</a></li>
+      <li><a href="/es-419/roadmap/">Roadmap</a></li>
+      <li><a href="/es-419/changelog/">Changelog</a></li>
+      <li><a href="/es-419/blog/" aria-current="page">Blog</a></li>
+      <li><a href="/es-419/compare/">Comparar</a></li>
+      <li><a class="nav-cta" href="/es-419/download/">Descargar</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<article class="block prose">
+  <p><a href="/es-419/blog/">← Blog</a></p>
+  <h1>Lo que sale de tu computadora: la tabla de egress</h1>
+  <p class="post-meta">
+    <time datetime="2026-11-05">2026-11-05</time> ·
+    Privacidad
+  </p>
+  <p>La mayoría de las apps pide confianza. Nosotros preferimos mostrar el
+inventario.</p>
+<p>Toda ruta de salida de red de Sovereign Social está registrada en un
+<code>EGRESS_REGISTRY</code> en el código fuente — y la página de privacidad del
+sitio es <strong>generada de esa tabla en build</strong>. Si el código y la página
+divergen, el CI falla.</p>
+<p>Lo que la tabla muestra, sin maquillaje:</p>
+<ul>
+<li><strong>Relays Nostr</strong> — los que tú configuraste; es el transporte del
+  protocolo.</li>
+<li><strong>oEmbed/embeds</strong> — solo cuando un post referencia media externa.</li>
+<li><strong>Actualización de la app</strong> — consulta de release, opt-in.</li>
+</ul>
+<p>Y lo que no existe: analytics, telemetría por defecto, llamadas a un
+servidor del proyecto, fingerprinting. No hay canal de "phone home" — el
+modelo de amenaza es público y la tabla es auditable en el código.</p>
+<p>Si algún día ves una salida nueva en la tabla, vendrá con finalidad y
+control documentados — porque la tabla <em>es</em> el código.</p>
+  <p class="post-meta">Este post también se publica como artículo Nostr de formato largo (NIP-23) con la clave del proyecto.</p>
+</article>
+</main>
+<footer class="site-footer">
+  <nav class="lang-switch" aria-label="Idiomas">    <a href="/pt-BR/" hreflang="pt-BR">pt-BR</a>    <a href="/en-US/" hreflang="en-US">en-US</a>    <a href="/es-419/" aria-current="true" hreflang="es-419">es-419</a>  </nav>
+  <p class="footer-line">Software libre (AGPL-3.0). Sin anuncios, sin rastreo, sin cookies.</p>
+  <p class="footer-line">
+    <a href="/es-419/privacy/">Privacidad</a> ·
+    <a href="https://geovannec.github.io/.well-known/security.txt">security.txt</a> ·
+    <a href="https://geovannec.github.io/feed.atom">Feed Atom</a> ·
+    <label for="retro-toggle" class="retro-label">Modo retro</label>
+  </p>
+</footer>
+</div>
+</body>
+</html>

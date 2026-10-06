@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog</title>
+  <link href="https://geovannec.github.io/pt-BR/blog.atom" rel="self"/>
+  <id>https://geovannec.github.io/pt-BR/blog.atom</id>
+  <updated>2026-11-19T00:00:00Z</updated>
+  <entry>
+    <title>Comunidades fundadoras: crescer sem algoritmo</title>
+    <link href="https://geovannec.github.io/pt-BR/blog/p/comunidades-fundadoras/"/>
+    <id>https://geovannec.github.io/pt-BR/blog/p/comunidades-fundadoras/</id>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <summary>O Sovereign não tem &#x27;explore&#x27; nem trending — por design. Como uma comunidade cresce assim? Com convite, não com impressão.</summary>
+  </entry>
+  <entry>
+    <title>O que sai do seu computador: a tabela de egress</title>
+    <link href="https://geovannec.github.io/pt-BR/blog/p/tabela-egress/"/>
+    <id>https://geovannec.github.io/pt-BR/blog/p/tabela-egress/</id>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>Privacidade não é promessa — é inventário. Toda saída de rede do app vive numa tabela gerada do código, e o site a mostra.</summary>
+  </entry>
+  <entry>
+    <title>Offline-first de verdade: o que acontece quando a rede cai</title>
+    <link href="https://geovannec.github.io/pt-BR/blog/p/offline-first/"/>
+    <id>https://geovannec.github.io/pt-BR/blog/p/offline-first/</id>
+    <updated>2026-10-15T00:00:00Z</updated>
+    <summary>O app não &#x27;degrada&#x27; sem internet — ele opera em modo full local e sincroniza eventos assinados quando a conectividade volta.</summary>
+  </entry>
+  <entry>
+    <title>Por que o Sovereign Social existe</title>
+    <link href="https://geovannec.github.io/pt-BR/blog/p/por-que-sovereign/"/>
+    <id>https://geovannec.github.io/pt-BR/blog/p/por-que-sovereign/</id>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>As comunidades que formaram a internet brasileira sumiram com o Orkut. Este projeto existe para que a próxima geração não dependa do balanço trimestral de uma empresa.</summary>
+  </entry>
+</feed>

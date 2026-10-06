@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security — Sovereign Social</title>
+<meta name="description" content="Threat model, audits, coordinated disclosure and build verification for Sovereign Social.">
+<link rel="canonical" href="https://geovannec.github.io/en-US/security/"><link rel="alternate" hreflang="pt-BR" href="https://geovannec.github.io/pt-BR/security/"><link rel="alternate" hreflang="en-US" href="https://geovannec.github.io/en-US/security/"><link rel="alternate" hreflang="es-419" href="https://geovannec.github.io/es-419/security/"><link rel="alternate" hreflang="x-default" href="https://geovannec.github.io/pt-BR/security/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Security — Sovereign Social">
+<meta property="og:description" content="Threat model, audits, coordinated disclosure and build verification for Sovereign Social.">
+<meta property="og:url" content="https://geovannec.github.io/en-US/security/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Changelog" href="https://geovannec.github.io/feed.atom">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Blog" href="https://geovannec.github.io/en-US/blog.atom"></head>
+<body>
+<input type="checkbox" id="retro-toggle" class="retro-toggle" aria-hidden="true">
+<div class="site">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="nav-brand" href="/en-US/">Sovereign&nbsp;Social</a>
+    <ul class="nav-links">
+      <li><a href="/en-US/demo/">Demo</a></li>
+      <li><a href="/en-US/manifesto/">Manifesto</a></li>
+      <li><a href="/en-US/privacy/">Privacy</a></li>
+      <li><a href="/en-US/security/" aria-current="page">Security</a></li>
+      <li><a href="/en-US/governance/">Governance</a></li>
+      <li><a href="/en-US/roadmap/">Roadmap</a></li>
+      <li><a href="/en-US/changelog/">Changelog</a></li>
+      <li><a href="/en-US/blog/">Blog</a></li>
+      <li><a href="/en-US/compare/">Compare</a></li>
+      <li><a class="nav-cta" href="/en-US/download/">Download</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<section class="block prose">
+  <h1>Security</h1>  <section aria-labelledby="s1">
+    <h2 id="s1">Threat model</h2>    <p>The public threat model documents what we protect (private keys, local data, event integrity) and against whom (malicious relays, local-network MITM, hostile web pages).</p>    <p>The local server accepts loopback connections only, with an anti-DNS-rebinding origin gate, per-launch CSRF token, step-up auth on destructive actions and per-route rate limiting.</p>  </section>  <section aria-labelledby="s2">
+    <h2 id="s2">Audits and reviews</h2>    <p>Security reviews already completed, all public in the repository:</p>    <ul>      <li>MVP and V3 security audits (docs/AUDITORIA_SEGURANCA_MVP.md, SECURITY_AUDIT_V3.md).</li>      <li>NIP-41 key rotation and Shamir (SLIP-39) backup audit with official vectors in CI.</li>      <li>CodeQL, OpenSSF Scorecard and weekly CVE scans with SBOM in the pipeline.</li>    </ul>  </section>  <section aria-labelledby="s3">
+    <h2 id="s3">Report a vulnerability</h2>    <p>Use GitHub Private Vulnerability Reporting (Security tab → Report a vulnerability). SLAs: acknowledge in 72h, triage in 7 days, fix in 30 days; coordinated disclosure within 90 days.</p>    <p>If the private channel fails, open a minimal issue saying only &#39;security concern — please contact me&#39;, with no details.</p>  </section>  <section aria-labelledby="s4">
+    <h2 id="s4">Verify your download</h2>    <p>SHA256SUMS signed by cosign keyless, per-release SBOM and verification instructions on the download page. Reproduce the build if you want full proof.</p>  </section></section>
+</main>
+<footer class="site-footer">
+  <nav class="lang-switch" aria-label="Languages">    <a href="/pt-BR/" hreflang="pt-BR">pt-BR</a>    <a href="/en-US/" aria-current="true" hreflang="en-US">en-US</a>    <a href="/es-419/" hreflang="es-419">es-419</a>  </nav>
+  <p class="footer-line">Free software (AGPL-3.0). No ads, no tracking, no cookies.</p>
+  <p class="footer-line">
+    <a href="/en-US/privacy/">Privacy</a> ·
+    <a href="https://geovannec.github.io/.well-known/security.txt">security.txt</a> ·
+    <a href="https://geovannec.github.io/feed.atom">Atom feed</a> ·
+    <label for="retro-toggle" class="retro-label">Retro mode</label>
+  </p>
+</footer>
+</div>
+</body>
+</html>

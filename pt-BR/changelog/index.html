@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog — Sovereign Social</title>
+<meta name="description" content="Todas as versões do Sovereign Social, com feed Atom.">
+<link rel="canonical" href="https://geovannec.github.io/pt-BR/changelog/"><link rel="alternate" hreflang="pt-BR" href="https://geovannec.github.io/pt-BR/changelog/"><link rel="alternate" hreflang="en-US" href="https://geovannec.github.io/en-US/changelog/"><link rel="alternate" hreflang="es-419" href="https://geovannec.github.io/es-419/changelog/"><link rel="alternate" hreflang="x-default" href="https://geovannec.github.io/pt-BR/changelog/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Changelog — Sovereign Social">
+<meta property="og:description" content="Todas as versões do Sovereign Social, com feed Atom.">
+<meta property="og:url" content="https://geovannec.github.io/pt-BR/changelog/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Changelog" href="https://geovannec.github.io/feed.atom">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Blog" href="https://geovannec.github.io/pt-BR/blog.atom"></head>
+<body>
+<input type="checkbox" id="retro-toggle" class="retro-toggle" aria-hidden="true">
+<div class="site">
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Navegação principal">
+    <a class="nav-brand" href="/pt-BR/">Sovereign&nbsp;Social</a>
+    <ul class="nav-links">
+      <li><a href="/pt-BR/demo/">Demo</a></li>
+      <li><a href="/pt-BR/manifesto/">Manifesto</a></li>
+      <li><a href="/pt-BR/privacy/">Privacidade</a></li>
+      <li><a href="/pt-BR/security/">Segurança</a></li>
+      <li><a href="/pt-BR/governance/">Governança</a></li>
+      <li><a href="/pt-BR/roadmap/">Roadmap</a></li>
+      <li><a href="/pt-BR/changelog/" aria-current="page">Changelog</a></li>
+      <li><a href="/pt-BR/blog/">Blog</a></li>
+      <li><a href="/pt-BR/compare/">Comparar</a></li>
+      <li><a class="nav-cta" href="/pt-BR/download/">Baixar</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<section class="block prose">
+  <h1>Changelog</h1>
+  <p>Todas as releases, geradas do CHANGELOG.md do repositório. Assine via <a href="https://geovannec.github.io/feed.atom">feed Atom</a></p>  <article class="release" id="1-2-0">
+    <h2>1.2.0 — Trust Release (Web-Origin Security, Quality Gates &amp; OSS Health)</h2>
+    <p class="muted">2026-09-30</p>
+    <p>Esta versão conclui os Sprints 30–34 do **Plano V4**: o servidor local em `127.0.0.1` passa a ser tratado como fronteira de confiança real contra páginas web maliciosas, a qualidade do código ganha gates objetivos de cobertura/mutação/snapshot, e o repositório recebe a infraestrutura completa de contribuição e supply-chain verificável.</p>
+<h3>Adicionado</h3>
+<p>— **Segurança web-origin (S30)**: origin gate anti-DNS-rebinding, CSRF synchronizer token 256-bit por lançamento, CORS same-origin sem wildcard, `X-Frame-Options: DENY` + `frame-ancestors &#x27;none&#x27;`, step-up auth em ações destrutivas (rotação, panic wipe, export), rate limiting por rota e por relay, recusa de bind fora de loopback.</p>
+<p>— **Quality gates (S33)**: `pytest-xdist` (4,2× speedup — 169s→40s), mutation testing `mutmut` com triage completa dos survivors (crypto 83,7% / governance 75,9% convencional), flaky-test hunter noturno com auto-issue, testes stateful Hypothesis de storage, golden tests de páginas + takeout, snapshot de OpenAPI (133 rotas), gates de cobertura por camada + `diff-cover ≥90%` em PRs, dataset demo determinístico (`tests/factories/` + `scripts/seed_demo.py`), harness de soak test (`scripts/soak_test.py` + workflow).</p>
+<p>— **OSS health (S34)**: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` (Contributor Covenant 2.1), `SUPPORT.md`, issue/PR templates, `.github/labels.yml`, devcontainer, `justfile`, pre-commit (ruff pinado, mypy strict, REUSE 3.3 — 598/598 arquivos compliant, secret scan, commit-msg convencional), site docs MkDocs-Material com build strict no CI, processo de RFC (`docs/rfcs/`), índice de ADRs.</p>
+<p>— **Supply chain (S34)**: todas as GitHub Actions pinadas por SHA, `permissions:` mínimas em todos os workflows, Dependabot (actions + pip, security updates ON), OpenSSF Scorecard + CodeQL (gated para repo público), **cosign keyless** do `SHA256SUMS.txt` (transparency log Rekor) e SLSA provenance preparada no pipeline de release; README ganha instruções de verificação SSH + sigstore.</p>
+<h3>Corrigido</h3>
+<p>— `OutboxQueue.pending_count()` não conta mais eventos que esgotaram retries (dead-letters) — encontrado pelo stateful Hypothesis.</p>
+<p>— Rate limit: navegação GET em `/security/` não consome mais o bucket estrito de autenticação.</p>
+<p>— Race xdist em testes E2E (seed por porta de worker); flake DNS em testes NIP-05/upload.</p>
+<p>— Cobertura do branch `darwin` do sandbox de plugins testável em Linux (drift de gate macOS↔Linux).</p>
+<p>— Removida dependência morta `bip-utils` (eliminou alerta Dependabot de `ecdsa`/Minerva).</p>
+<h3>Segurança</h3>
+<p>— VDP formalizado: SLAs (72h ack / 7d triage / 30d fix), coordinated disclosure ≤90d, hall of fame, CNA path via GitHub Security Advisories.</p>
+  </article>  <article class="release" id="1-1-0">
+    <h2>1.1.0 — V3 Release (Hardening, Extensibilidade &amp; Launch Readiness)</h2>
+    <p class="muted">2026-09-29</p>
+    <p>Esta versão conclui o **Plano V3** (Sprints 15–29): decomposição dos god objects, observabilidade opt-in, hardening de segurança e supply-chain, i18n, acessibilidade, conformidade legal, testes de caos, arquitetura de plugins com sandbox, revisão completa do namespace de event kinds Nostr (Protocol V2) e engenharia de release cross-platform.</p>
+<h3>Adicionado</h3>
+<p>— **Arquitetura (S15–S17)**: `events.py`/`routes.py` decompostos em módulos de domínio com registry-based dispatch; logging estruturado JSON com `request_id` end-to-end; connection pooling + LRU cache eliminando padrões N+1.</p>
+<p>— **Segurança (S18–S19, S24)**: scan semanal de CVEs com SBOM e PR automático; fuzz de 10k+ iterações na desserialização de eventos; **rotação de chaves NIP-41** com expurgo atômico e recuperação social via Dead Man&#x27;s Switch; harness de chaos relay (churn, relay malicioso, partição) — incluindo correção de *ID squatting* na deduplicação.</p>
+<p>— **Global Readiness (S21–S23)**: i18n completo (pt-BR/en-US, plurais CLDR, RTL), gate de acessibilidade axe-core em CI, `PRIVACY.md`/`SECURITY.md`/guia de operador de relay, auditoria de licenças sem conflitos copyleft.</p>
+<p>— **Extensibilidade (S25–S26)**: arquitetura de plugins em subprocesso com API capability-scoped (sem acesso a chaves/DB/rede); **Protocol V2** — renumeração de kinds para faixas canônicas NIP-01 com dual-read legado, conformidade NIP-88 (enquetes) e NIP-72 (moderadores), zero colisões de namespace.</p>
+<p>— **Launch Readiness (S27–S29)**: crash reporting e métricas **opt-in, desligados por padrão**, anonizados e locais; verificação de update via GitHub Releases sem auto-install; builds PyInstaller para 3 OS com assinatura condicional e manifestos SHA256; auto-welcome configurável por comunidade; FAQ auto-responder 100% local; dashboard de engajamento para moderadores; auditoria de segurança V3 final sem findings críticos/altos; checklist de launch consolidado (`docs/LAUNCH_CHECKLIST.md`).</p>
+<h3>Corrigido</h3>
+<p>— Ordem dedup→verify na ingestão de relay (eliminou vetor de censura por ID squatting).</p>
+<p>— Sanitização de `request_path` em crash reports (pubkeys em rotas como `/profile/&lt;hex&gt;`).</p>
+<p>— Material de certificados de signing em `vars.*` migrado para `secrets.*` com cleanup garantido no `release.yml`.</p>
+  </article>  <article class="release" id="1-0-0">
+    <h2>1.0.0 — V2 Final Release (Sovereignty &amp; Federação)</h2>
+    <p class="muted">2026-09-28</p>
+    <p>Esta versão conclui o ciclo completo da **Fase V2** (Sprints 11 a 14), totalizando as 148 tarefas de engenharia previstas no plano de sprints. Traz a implementação completa de Web of Trust (WoT), criptografia NIP-44 v2, comunidades privadas com chaves simétricas de grupo, votações secretas commit-reveal, Dead Man&#x27;s Switch, portabilidade total e cliente desktop nativo.</p>
+<h3>Adicionado</h3>
+<p>— **Web of Trust (WoT / S11)**:</p>
+<p>— Algoritmo de fluxo de confiança determinístico com atenuação de distância exponencial e cache em SQLite.</p>
+<p>— Filtro social anti-spam baseado em WoT com tolerância configurável (WoT threshold) por usuário e por comunidade.</p>
+<p>— Painel visual de reputação exibindo distância de rede, conexões mútuas e caminhos de confiança.</p>
+<p>— **Criptografia NIP-44 v2 &amp; Comunidades Privadas (S12)**:</p>
+<p>— Cifragem ChaCha20-Poly1305 + HMAC-SHA256 (NIP-44 v2) com isolamento temporal e derivação de chave HKDF.</p>
+<p>— Comunidades privadas criptografadas (Kind 34550 privado) com envelopes NIP-17/44 e chave simétrica de grupo (Kind 10058) com rotação de época.</p>
+<p>— Sistema de Match/Crush secreto (Kind 10054) com hash de compromisso cifrado e revelação mútua no perfil.</p>
+<p>— Recurso &quot;Quem visitou meu perfil&quot; com eventos efêmeros opt-in e Ghost Mode com garantia de reciprocidade.</p>
+<p>— Odômetro clássico de visitas com animação retrô no cabeçalho do perfil.</p>
+<p>— Customização visual avançada de perfil (cores personalizadas, texturas de fundo e temas retrô Orkut).</p>
+<p>— Respostas anônimas em tópicos (Burner Threads) utilizando chaves efêmeras isoladas por discussão.</p>
+<p>— Cápsulas do tempo comunitárias com revelação programada no futuro (Time Capsule).</p>
+<p>— **Federação &amp; Governança Avançada (S13)**:</p>
+<p>— Alianças e federação entre comunidades (Kind 34552) com compartilhamento de listas de bloqueio e moderação mútua.</p>
+<p>— Cross-posting com atribuição e links cruzados preservando o contexto original.</p>
+<p>— Calendário Comunitário de Eventos (NIP-52) com RSVPs públicos e exportação no formato padrão iCal (.ics).</p>
+<p>— Feeds RSS e Atom nativos gerados dinamicamente para comunidades e perfis públicos.</p>
+<p>— Votação verdadeiramente secreta (Secret Ballot) com compromisso SHA-256 e fase posterior de apuração (commit-reveal).</p>
+<p>— Motor de busca semântico estruturado multifator (autor, intervalo de datas, comunidade, tags e kinds).</p>
+<p>— Subfórum de Classificados/Mercado com campos estruturados para anúncios e negociações soberanas.</p>
+<p>— Tópicos obrigatórios de apresentação de novos membros com liberação automática de permissão de escrita.</p>
+<p>— Painel de membros ativos em tempo real via eventos efêmeros Nostr.</p>
+<p>— **V2 Polish, Dead Man&#x27;s Switch &amp; Launch (S14)**:</p>
+<p>— Dead Man&#x27;s Switch (Kind 30040) com intervalo de heartbeat configurável e gatilho memorial com quórum M-de-N guardiões.</p>
+<p>— Transição de estado de perfil para Memorial Mode imutável e somente-leitura.</p>
+<p>— Histórico local de pseudônimos e aliases anteriores do perfil.</p>
+<p>— Sistema de Fãs com contagem de prestígio e ranking de seguidores não-recíprocos.</p>
+<p>— Auto-resposta configurável para novos visitantes de perfil.</p>
+<p>— Takeout completo em arquivo ZIP contendo todo o histórico do usuário exportado em Markdown estruturado e arquivos de mídia.</p>
+<p>— Tópicos especiais de Timeline/Changelog com marcos visuais para documentação de projetos comunitários.</p>
+<p>— Indicador de saúde e descentralização de relays por comunidade com a mensagem canônica *&quot;sua comunidade está em N relays ativos&quot;*, badges coloridos e telemetria de latência.</p>
+<p>— Aplicativo desktop nativo empacotado via PyWebView (`sovereign-desktop`) com servidor local Uvicorn integrado e fallback automático para navegador.</p>
+<p>— Suíte completa de testes E2E cobrindo os 5 fluxos principais da V2 e auditoria de segurança criptográfica formal.</p>
+  </article>  <article class="release" id="0-2-0">
+    <h2>0.2.0 — V1 Release (Social Avançado &amp; Fórum Rico)</h2>
+    <p class="muted">2026-09-14</p>
+    <p>Consolidação da **Fase V1** (Sprints 7 a 10), trazendo a experiência completa das redes sociais nostálgicas com amizades assimétricas, álbuns, emojis NIP-30 e governança aprofundada.</p>
+<h3>Adicionado</h3>
+<p>— **Social Avançado (S7)**:</p>
+<p>— Sistema de amizades e follows com distinção clara entre amigos mútuos, seguidores e ídolos.</p>
+<p>— Mural de recados (Scraps) com suporte estendido a BBCode, Markdown e citações em cascata.</p>
+<p>— Depoimentos com aprovação obrigatória do destinatário antes da exibição pública.</p>
+<p>— Álbuns de fotos locais com compressão client-side e visualizador estilo galeria.</p>
+<p>— Trilha sonora do perfil (YouTube / MP3 / SoundCloud embed) com reprodução retrô.</p>
+<p>— Status em tempo real no perfil com emoticons clássicos.</p>
+<p>— **Fórum Rico (S8)**:</p>
+<p>— Emojis customizados por comunidade (NIP-30 Kind 30030) com auto-complete `:emoji:`.</p>
+<p>— Fixação de tópicos (pin/unpin) com badge destacado de anúncio da moderação.</p>
+<p>— Tópicos FAQ oficiais e wiki comunitária editável por membros confiáveis.</p>
+<p>— Enquetes de comunidade com múltiplas opções, votos únicos e contagem ao vivo.</p>
+<p>— Tags populares da comunidade e navegação lateral por categorias.</p>
+<p>— **Governança &amp; Moderação V1 (S9)**:</p>
+<p>— Sistema de recursos (appeals) para usuários moderados recorrerem a decisões de quarentena.</p>
+<p>— Petições de revogação de moderadores (Mod Recall) por voto comunitário.</p>
+<p>— Papéis customizados com cores e ícones por comunidade (Custom Roles).</p>
+<p>— Slow mode dinâmico para controle de flood e rate-limiting de publicações em tópicos aquecidos.</p>
+<p>— Bloqueio seletivo de links externos e domínios suspeitos por comunidade.</p>
+<p>— **Polimento V1 (S10)**:</p>
+<p>— Atalhos de teclado no estilo Google Reader / fóruns clássicos (`j`/`k` para navegação, `c` para novo tópico, `r` para responder).</p>
+<p>— Acessibilidade WCAG 2.1 AA auditada em todos os componentes visuais e formulários.</p>
+<p>— Benchmarks de performance: consultas SQLite abaixo de 10ms, FTS5 abaixo de 50ms e mineração PoW abaixo de 300ms.</p>
+<p>— Auditoria de segurança formal da V1 validando isolamento de banco de dados e integridade de assinaturas.</p>
+  </article>  <article class="release" id="0-1-0">
+    <h2>0.1.0 — MVP Release (Fundação &amp; Local-First)</h2>
+    <p class="muted">2026-08-15</p>
+    <p>Lançamento inicial da **Fase MVP** (Sprints 1 a 6), estabelecendo a arquitetura do projeto.</p>
+<h3>Adicionado</h3>
+<p>— **Core Criptográfico &amp; Protocolo Nostr (S1)**:</p>
+<p>— Gerenciamento de chaves secp256k1 com derivação silenciosa via Argon2id + BIP-39 a partir de senha mestre.</p>
+<p>— Serialização e verificação canônica de eventos Nostr (NIP-01) com assinaturas Schnorr.</p>
+<p>— Suporte ao armazenamento seguro no chaveiro nativo do sistema operacional (`keyring`).</p>
+<p>— **Camada de Dados &amp; Rede Local-First (S2)**:</p>
+<p>— Banco de dados local SQLite com Write-Ahead Logging (WAL) e migrações idempotentes.</p>
+<p>— Fila de saída resiliente (`OutboxQueue`) garantindo operação 100% offline.</p>
+<p>— Pool de relays WebSocket assíncrono com reconexão automática e telemetria de latência.</p>
+<p>— Motor de busca em texto pleno FTS5 integrado com realce de sintaxe.</p>
+<p>— **Identidade &amp; Perfis Soberanos (S3)**:</p>
+<p>— Perfis de usuário (Kind 0) com bio, avatar, localidade e campos de preferências.</p>
+<p>— Mural de Scraps públicos e privados com paginação assíncrona HTMX.</p>
+<p>— Top Friends (NIP-51) configurável de 4 a 16 contatos com ordenação drag-and-drop.</p>
+<p>— Reações e reputação (+Rep / Thanks) via Kind 7 idempotente.</p>
+<p>— Selo dourado de Pioneiro para contas dos primeiros blocos de usuários.</p>
+<p>— **Fóruns &amp; Comunidades (S4)**:</p>
+<p>— Criação e governança de comunidades temáticas baseadas em NIP-72 estendido (Kind 34550).</p>
+<p>— Tópicos de discussão com sistema de *bump* automático e ordenação dual (Bump vs Cronológico).</p>
+<p>— Subfóruns categorizados e regras de conduta com aceitação obrigatória.</p>
+<p>— **Governança Básica &amp; Anti-Spam (S5 &amp; S6)**:</p>
+<p>— Proof-of-Work (NIP-13) client-side para mitigação de spam sem captchas centralizados.</p>
+<p>— Account-Age Gate para restrição de publicações por idade mínima de conta.</p>
+<p>— Denúncias descentralizadas (NIP-56 Kind 1984) e sistema de quarentena com tarjas de aviso.</p>
+<p>— Interface Web nativa em FastAPI + Jinja2 + HTMX com modo escuro automático.</p>
+  </article></section>
+</main>
+<footer class="site-footer">
+  <nav class="lang-switch" aria-label="Idiomas">    <a href="/pt-BR/" aria-current="true" hreflang="pt-BR">pt-BR</a>    <a href="/en-US/" hreflang="en-US">en-US</a>    <a href="/es-419/" hreflang="es-419">es-419</a>  </nav>
+  <p class="footer-line">Software livre (AGPL-3.0). Sem anúncios, sem rastreamento, sem cookies.</p>
+  <p class="footer-line">
+    <a href="/pt-BR/privacy/">Privacidade</a> ·
+    <a href="https://geovannec.github.io/.well-known/security.txt">security.txt</a> ·
+    <a href="https://geovannec.github.io/feed.atom">Feed Atom</a> ·
+    <label for="retro-toggle" class="retro-label">Modo retrô</label>
+  </p>
+</footer>
+</div>
+</body>
+</html>

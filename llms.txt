@@ -1,0 +1,53 @@
+# Sovereign Social
+
+> Local-first, key-owned social network. No ads, no tracking.
+
+## Pages
+- https://geovannec.github.io/pt-BR/
+- https://geovannec.github.io/pt-BR/download/
+- https://geovannec.github.io/pt-BR/manifesto/
+- https://geovannec.github.io/pt-BR/privacy/
+- https://geovannec.github.io/pt-BR/security/
+- https://geovannec.github.io/pt-BR/governance/
+- https://geovannec.github.io/pt-BR/roadmap/
+- https://geovannec.github.io/pt-BR/press/
+- https://geovannec.github.io/pt-BR/changelog/
+- https://geovannec.github.io/pt-BR/demo/
+- https://geovannec.github.io/pt-BR/compare/
+- https://geovannec.github.io/pt-BR/blog/
+- https://geovannec.github.io/pt-BR/blog/p/comunidades-fundadoras/
+- https://geovannec.github.io/pt-BR/blog/p/tabela-egress/
+- https://geovannec.github.io/pt-BR/blog/p/offline-first/
+- https://geovannec.github.io/pt-BR/blog/p/por-que-sovereign/
+- https://geovannec.github.io/en-US/
+- https://geovannec.github.io/en-US/download/
+- https://geovannec.github.io/en-US/manifesto/
+- https://geovannec.github.io/en-US/privacy/
+- https://geovannec.github.io/en-US/security/
+- https://geovannec.github.io/en-US/governance/
+- https://geovannec.github.io/en-US/roadmap/
+- https://geovannec.github.io/en-US/press/
+- https://geovannec.github.io/en-US/changelog/
+- https://geovannec.github.io/en-US/demo/
+- https://geovannec.github.io/en-US/compare/
+- https://geovannec.github.io/en-US/blog/
+- https://geovannec.github.io/en-US/blog/p/comunidades-fundadoras/
+- https://geovannec.github.io/en-US/blog/p/tabela-egress/
+- https://geovannec.github.io/en-US/blog/p/offline-first/
+- https://geovannec.github.io/en-US/blog/p/por-que-sovereign/
+- https://geovannec.github.io/es-419/
+- https://geovannec.github.io/es-419/download/
+- https://geovannec.github.io/es-419/manifesto/
+- https://geovannec.github.io/es-419/privacy/
+- https://geovannec.github.io/es-419/security/
+- https://geovannec.github.io/es-419/governance/
+- https://geovannec.github.io/es-419/roadmap/
+- https://geovannec.github.io/es-419/press/
+- https://geovannec.github.io/es-419/changelog/
+- https://geovannec.github.io/es-419/demo/
+- https://geovannec.github.io/es-419/compare/
+- https://geovannec.github.io/es-419/blog/
+- https://geovannec.github.io/es-419/blog/p/comunidades-fundadoras/
+- https://geovannec.github.io/es-419/blog/p/tabela-egress/
+- https://geovannec.github.io/es-419/blog/p/offline-first/
+- https://geovannec.github.io/es-419/blog/p/por-que-sovereign/

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog</title>
+  <link href="https://geovannec.github.io/en-US/blog.atom" rel="self"/>
+  <id>https://geovannec.github.io/en-US/blog.atom</id>
+  <updated>2026-11-19T00:00:00Z</updated>
+  <entry>
+    <title>Founding communities: growing without an algorithm</title>
+    <link href="https://geovannec.github.io/en-US/blog/p/comunidades-fundadoras/"/>
+    <id>https://geovannec.github.io/en-US/blog/p/comunidades-fundadoras/</id>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <summary>Sovereign has no &#x27;explore&#x27; tab or trending — by design. How does a community grow like that? By invitation, not impressions.</summary>
+  </entry>
+  <entry>
+    <title>What leaves your computer: the egress table</title>
+    <link href="https://geovannec.github.io/en-US/blog/p/tabela-egress/"/>
+    <id>https://geovannec.github.io/en-US/blog/p/tabela-egress/</id>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>Privacy isn&#x27;t a promise — it&#x27;s an inventory. Every network egress path in the app lives in a table generated from code, and the site shows it.</summary>
+  </entry>
+  <entry>
+    <title>Actually offline-first: what happens when the network drops</title>
+    <link href="https://geovannec.github.io/en-US/blog/p/offline-first/"/>
+    <id>https://geovannec.github.io/en-US/blog/p/offline-first/</id>
+    <updated>2026-10-15T00:00:00Z</updated>
+    <summary>The app doesn&#x27;t &#x27;degrade&#x27; without internet — it operates in full local mode and syncs signed events when connectivity returns.</summary>
+  </entry>
+  <entry>
+    <title>Why Sovereign Social exists</title>
+    <link href="https://geovannec.github.io/en-US/blog/p/por-que-sovereign/"/>
+    <id>https://geovannec.github.io/en-US/blog/p/por-que-sovereign/</id>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>The communities that shaped the Brazilian internet disappeared with Orkut. This project exists so the next generation doesn&#x27;t depend on a company&#x27;s quarterly balance sheet.</summary>
+  </entry>
+</feed>

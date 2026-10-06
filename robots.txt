@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://geovannec.github.io/sitemap.xml

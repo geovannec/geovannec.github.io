@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog</title>
+  <link href="https://geovannec.github.io/es-419/blog.atom" rel="self"/>
+  <id>https://geovannec.github.io/es-419/blog.atom</id>
+  <updated>2026-11-19T00:00:00Z</updated>
+  <entry>
+    <title>Comunidades fundadoras: crecer sin algoritmo</title>
+    <link href="https://geovannec.github.io/es-419/blog/p/comunidades-fundadoras/"/>
+    <id>https://geovannec.github.io/es-419/blog/p/comunidades-fundadoras/</id>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <summary>Sovereign no tiene &#x27;explorar&#x27; ni trending — por diseño. ¿Cómo crece una comunidad así? Por invitación, no por impresiones.</summary>
+  </entry>
+  <entry>
+    <title>Lo que sale de tu computadora: la tabla de egress</title>
+    <link href="https://geovannec.github.io/es-419/blog/p/tabela-egress/"/>
+    <id>https://geovannec.github.io/es-419/blog/p/tabela-egress/</id>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>La privacidad no es una promesa — es un inventario. Cada salida de red de la app vive en una tabla generada del código, y el sitio la muestra.</summary>
+  </entry>
+  <entry>
+    <title>Offline-first de verdad: qué pasa cuando la red cae</title>
+    <link href="https://geovannec.github.io/es-419/blog/p/offline-first/"/>
+    <id>https://geovannec.github.io/es-419/blog/p/offline-first/</id>
+    <updated>2026-10-15T00:00:00Z</updated>
+    <summary>La app no se &#x27;degrada&#x27; sin internet — opera en modo local completo y sincroniza eventos firmados cuando la conectividad vuelve.</summary>
+  </entry>
+  <entry>
+    <title>Por qué existe Sovereign Social</title>
+    <link href="https://geovannec.github.io/es-419/blog/p/por-que-sovereign/"/>
+    <id>https://geovannec.github.io/es-419/blog/p/por-que-sovereign/</id>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Las comunidades que formaron la internet brasileña desaparecieron con Orkut. Este proyecto existe para que la próxima generación no dependa del balance trimestral de una empresa.</summary>
+  </entry>
+</feed>

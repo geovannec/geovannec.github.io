@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es-419" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad — Sovereign Social</title>
+<meta name="description" content="Qué sale de tu computadora: la tabla de egress completa, generada del código fuente.">
+<link rel="canonical" href="https://geovannec.github.io/es-419/privacy/"><link rel="alternate" hreflang="pt-BR" href="https://geovannec.github.io/pt-BR/privacy/"><link rel="alternate" hreflang="en-US" href="https://geovannec.github.io/en-US/privacy/"><link rel="alternate" hreflang="es-419" href="https://geovannec.github.io/es-419/privacy/"><link rel="alternate" hreflang="x-default" href="https://geovannec.github.io/pt-BR/privacy/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacidad — Sovereign Social">
+<meta property="og:description" content="Qué sale de tu computadora: la tabla de egress completa, generada del código fuente.">
+<meta property="og:url" content="https://geovannec.github.io/es-419/privacy/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Changelog" href="https://geovannec.github.io/feed.atom">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Blog" href="https://geovannec.github.io/es-419/blog.atom"></head>
+<body>
+<input type="checkbox" id="retro-toggle" class="retro-toggle" aria-hidden="true">
+<div class="site">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="nav-brand" href="/es-419/">Sovereign&nbsp;Social</a>
+    <ul class="nav-links">
+      <li><a href="/es-419/demo/">Demo</a></li>
+      <li><a href="/es-419/manifesto/">Manifiesto</a></li>
+      <li><a href="/es-419/privacy/" aria-current="page">Privacidad</a></li>
+      <li><a href="/es-419/security/">Seguridad</a></li>
+      <li><a href="/es-419/governance/">Gobernanza</a></li>
+      <li><a href="/es-419/roadmap/">Roadmap</a></li>
+      <li><a href="/es-419/changelog/">Changelog</a></li>
+      <li><a href="/es-419/blog/">Blog</a></li>
+      <li><a href="/es-419/compare/">Comparar</a></li>
+      <li><a class="nav-cta" href="/es-419/download/">Descargar</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<section class="block prose">
+  <h1>Privacidad</h1>  <section aria-labelledby="s1">
+    <h2 id="s1">El principio</h2>    <p>La app es local-first: ningún dato sale de tu computadora sin necesidad de protocolo o acción explícita tuya. No hay analytics, telemetría obligatoria, trackers ni llamadas ocultas.</p>    <p>Este sitio no usa cookies, fingerprinting ni analytics de terceros. Lo que lees aquí es lo que existe en el código.</p>  </section>  <section aria-labelledby="s2">
+    <h2 id="s2">Qué sale de tu computadora</h2>    <p>La tabla abajo se genera del EGRESS_REGISTRY en el código fuente — si el código y esta tabla divergen, el CI falla:</p>    <table class="egress-table">
+      <thead>
+        <tr><th>Propósito</th><th>Qué contactamos</th><th>Protocolo</th><th>Controlable</th></tr>
+      </thead>
+      <tbody>        <tr>
+          <td><code>relay</code></td>
+          <td>WebSocket de relays Nostr (sync de eventos NIP-01)</td>
+          <td>wss</td>
+          <td>Sí</td>
+        </tr>        <tr>
+          <td><code>relay_info</code></td>
+          <td>Documento NIP-11 do relay (capabilities e limites)</td>
+          <td>https</td>
+          <td>Sí</td>
+        </tr>        <tr>
+          <td><code>nip05</code></td>
+          <td>Resolução de handle NIP-05 (nome@dominio → pubkey)</td>
+          <td>https</td>
+          <td>Sí</td>
+        </tr>        <tr>
+          <td><code>oembed</code></td>
+          <td>Metadados de embeds aprovados pelo usuário</td>
+          <td>https</td>
+          <td>Sí</td>
+        </tr>        <tr>
+          <td><code>update_check</code></td>
+          <td>Consulta opcional de release no GitHub API (opt-out)</td>
+          <td>https</td>
+          <td>Sí</td>
+        </tr>        <tr>
+          <td><code>media_proxy</code></td>
+          <td>Fetch de imagens remotas via proxy local (S31-04)</td>
+          <td>https</td>
+          <td>Sí</td>
+        </tr>        <tr>
+          <td><code>media_upload</code></td>
+          <td>Upload opt-in para provedor de imagens (NIP-96)</td>
+          <td>https</td>
+          <td>Sí</td>
+        </tr>      </tbody>
+    </table>  </section>  <section aria-labelledby="s3">
+    <h2 id="s3">Qué ven los relays públicos</h2>    <p>Los eventos publicados en relays públicos son públicos: contenido, horario y tu llave pública. Trata los posts como postales firmadas — no escribas lo que no puede ser público.</p>    <p>Los mensajes directos usan NIP-44 (cifrado moderno). La eliminación vía NIP-09 es un pedido que los relays pueden honrar — no es garantía de remover copias ya propagadas.</p>  </section>  <section aria-labelledby="s4">
+    <h2 id="s4">Tus datos locales</h2>    <p>Todo queda en un SQLite en tu dispositivo, con exportación completa (takeout) en cualquier momento. Hay opción de cifrado en reposo; el panic wipe borra los datos locales en segundos.</p>  </section></section>
+</main>
+<footer class="site-footer">
+  <nav class="lang-switch" aria-label="Idiomas">    <a href="/pt-BR/" hreflang="pt-BR">pt-BR</a>    <a href="/en-US/" hreflang="en-US">en-US</a>    <a href="/es-419/" aria-current="true" hreflang="es-419">es-419</a>  </nav>
+  <p class="footer-line">Software libre (AGPL-3.0). Sin anuncios, sin rastreo, sin cookies.</p>
+  <p class="footer-line">
+    <a href="/es-419/privacy/">Privacidad</a> ·
+    <a href="https://geovannec.github.io/.well-known/security.txt">security.txt</a> ·
+    <a href="https://geovannec.github.io/feed.atom">Feed Atom</a> ·
+    <label for="retro-toggle" class="retro-label">Modo retro</label>
+  </p>
+</footer>
+</div>
+</body>
+</html>

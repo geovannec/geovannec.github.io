@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Segurança — Sovereign Social</title>
+<meta name="description" content="Modelo de ameaça, auditorias, disclosure coordenado e verificação de builds do Sovereign Social.">
+<link rel="canonical" href="https://geovannec.github.io/pt-BR/security/"><link rel="alternate" hreflang="pt-BR" href="https://geovannec.github.io/pt-BR/security/"><link rel="alternate" hreflang="en-US" href="https://geovannec.github.io/en-US/security/"><link rel="alternate" hreflang="es-419" href="https://geovannec.github.io/es-419/security/"><link rel="alternate" hreflang="x-default" href="https://geovannec.github.io/pt-BR/security/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Segurança — Sovereign Social">
+<meta property="og:description" content="Modelo de ameaça, auditorias, disclosure coordenado e verificação de builds do Sovereign Social.">
+<meta property="og:url" content="https://geovannec.github.io/pt-BR/security/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Changelog" href="https://geovannec.github.io/feed.atom">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Blog" href="https://geovannec.github.io/pt-BR/blog.atom"></head>
+<body>
+<input type="checkbox" id="retro-toggle" class="retro-toggle" aria-hidden="true">
+<div class="site">
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Navegação principal">
+    <a class="nav-brand" href="/pt-BR/">Sovereign&nbsp;Social</a>
+    <ul class="nav-links">
+      <li><a href="/pt-BR/demo/">Demo</a></li>
+      <li><a href="/pt-BR/manifesto/">Manifesto</a></li>
+      <li><a href="/pt-BR/privacy/">Privacidade</a></li>
+      <li><a href="/pt-BR/security/" aria-current="page">Segurança</a></li>
+      <li><a href="/pt-BR/governance/">Governança</a></li>
+      <li><a href="/pt-BR/roadmap/">Roadmap</a></li>
+      <li><a href="/pt-BR/changelog/">Changelog</a></li>
+      <li><a href="/pt-BR/blog/">Blog</a></li>
+      <li><a href="/pt-BR/compare/">Comparar</a></li>
+      <li><a class="nav-cta" href="/pt-BR/download/">Baixar</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<section class="block prose">
+  <h1>Segurança</h1>  <section aria-labelledby="s1">
+    <h2 id="s1">Modelo de ameaça</h2>    <p>O threat model público documenta o que protegemos (chaves privadas, dados locais, integridade de eventos) e contra quem (relay malicioso, MITM de rede local, páginas web hostis).</p>    <p>O servidor local aceita apenas conexões loopback, com origin gate anti-DNS-rebinding, CSRF token por lançamento, step-up auth em ações destrutivas e rate limiting por rota.</p>  </section>  <section aria-labelledby="s2">
+    <h2 id="s2">Auditorias e revisões</h2>    <p>Revisões de segurança já realizadas, todas públicas no repositório:</p>    <ul>      <li>Auditoria de segurança MVP e V3 (docs/AUDITORIA_SEGURANCA_MVP.md, SECURITY_AUDIT_V3.md).</li>      <li>Auditoria de rotação de chaves NIP-41 e backup Shamir (SLIP-39) com vetores oficiais em CI.</li>      <li>CodeQL, OpenSSF Scorecard e scan semanal de CVEs com SBOM no pipeline.</li>    </ul>  </section>  <section aria-labelledby="s3">
+    <h2 id="s3">Reportar uma vulnerabilidade</h2>    <p>Use o GitHub Private Vulnerability Reporting (aba Security → Report a vulnerability). SLAs: resposta em 72h, triagem em 7 dias, correção em 30 dias; disclosure coordenado em até 90 dias.</p>    <p>Se o canal privado falhar, abra uma issue mínima dizendo apenas &#39;security concern — please contact me&#39;, sem detalhes.</p>  </section>  <section aria-labelledby="s4">
+    <h2 id="s4">Verifique seu download</h2>    <p>SHA256SUMS assinado por cosign keyless, SBOM por release e instruções de verificação na página de download. Reproduza a build se quiser prova completa.</p>  </section></section>
+</main>
+<footer class="site-footer">
+  <nav class="lang-switch" aria-label="Idiomas">    <a href="/pt-BR/" aria-current="true" hreflang="pt-BR">pt-BR</a>    <a href="/en-US/" hreflang="en-US">en-US</a>    <a href="/es-419/" hreflang="es-419">es-419</a>  </nav>
+  <p class="footer-line">Software livre (AGPL-3.0). Sem anúncios, sem rastreamento, sem cookies.</p>
+  <p class="footer-line">
+    <a href="/pt-BR/privacy/">Privacidade</a> ·
+    <a href="https://geovannec.github.io/.well-known/security.txt">security.txt</a> ·
+    <a href="https://geovannec.github.io/feed.atom">Feed Atom</a> ·
+    <label for="retro-toggle" class="retro-label">Modo retrô</label>
+  </p>
+</footer>
+</div>
+</body>
+</html>

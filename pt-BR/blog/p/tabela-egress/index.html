@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O que sai do seu computador: a tabela de egress — Sovereign Social</title>
+<meta name="description" content="Privacidade não é promessa — é inventário. Toda saída de rede do app vive numa tabela gerada do código, e o site a mostra.">
+<link rel="canonical" href="https://geovannec.github.io/pt-BR/blog/p/tabela-egress/"><link rel="alternate" hreflang="pt-BR" href="https://geovannec.github.io/pt-BR/blog/p/tabela-egress/"><link rel="alternate" hreflang="en-US" href="https://geovannec.github.io/en-US/blog/p/tabela-egress/"><link rel="alternate" hreflang="es-419" href="https://geovannec.github.io/es-419/blog/p/tabela-egress/"><link rel="alternate" hreflang="x-default" href="https://geovannec.github.io/pt-BR/blog/p/tabela-egress/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="O que sai do seu computador: a tabela de egress — Sovereign Social">
+<meta property="og:description" content="Privacidade não é promessa — é inventário. Toda saída de rede do app vive numa tabela gerada do código, e o site a mostra.">
+<meta property="og:url" content="https://geovannec.github.io/pt-BR/blog/p/tabela-egress/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Changelog" href="https://geovannec.github.io/feed.atom">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Blog" href="https://geovannec.github.io/pt-BR/blog.atom"></head>
+<body>
+<input type="checkbox" id="retro-toggle" class="retro-toggle" aria-hidden="true">
+<div class="site">
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Navegação principal">
+    <a class="nav-brand" href="/pt-BR/">Sovereign&nbsp;Social</a>
+    <ul class="nav-links">
+      <li><a href="/pt-BR/demo/">Demo</a></li>
+      <li><a href="/pt-BR/manifesto/">Manifesto</a></li>
+      <li><a href="/pt-BR/privacy/">Privacidade</a></li>
+      <li><a href="/pt-BR/security/">Segurança</a></li>
+      <li><a href="/pt-BR/governance/">Governança</a></li>
+      <li><a href="/pt-BR/roadmap/">Roadmap</a></li>
+      <li><a href="/pt-BR/changelog/">Changelog</a></li>
+      <li><a href="/pt-BR/blog/" aria-current="page">Blog</a></li>
+      <li><a href="/pt-BR/compare/">Comparar</a></li>
+      <li><a class="nav-cta" href="/pt-BR/download/">Baixar</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<article class="block prose">
+  <p><a href="/pt-BR/blog/">← Blog</a></p>
+  <h1>O que sai do seu computador: a tabela de egress</h1>
+  <p class="post-meta">
+    <time datetime="2026-11-05">2026-11-05</time> ·
+    Privacidade
+  </p>
+  <p>A maioria dos apps pede confiança. A gente prefere mostrar o inventário.</p>
+<p>Todo caminho de saída de rede do Sovereign Social está registrado num
+<code>EGRESS_REGISTRY</code> no código-fonte — e a página de privacidade do site é
+<strong>gerada dessa tabela em build</strong>. Se o código e a página divergirem, o
+CI falha.</p>
+<p>O que a tabela mostra, sem maquiagem:</p>
+<ul>
+<li><strong>Relays Nostr</strong> — os que você configurou; é o transporte do protocolo.</li>
+<li><strong>oEmbed/embeds</strong> — só quando um post referencia mídia externa.</li>
+<li><strong>Atualização de app</strong> — consulta de release, opt-in.</li>
+</ul>
+<p>E o que não existe: analytics, telemetria default-on, chamadas a servidor
+do projeto, fingerprinting. Não há canal de "phone home" — o modelo de
+ameaça é público e a tabela é auditável no código.</p>
+<p>Se um dia você vir uma saída nova na tabela, ela estará documentada com
+finalidade e controle — porque a tabela <em>é</em> o código.</p>
+  <p class="post-meta">Este post também é publicado como artigo Nostr de formato longo (NIP-23) com a chave do projeto.</p>
+</article>
+</main>
+<footer class="site-footer">
+  <nav class="lang-switch" aria-label="Idiomas">    <a href="/pt-BR/" aria-current="true" hreflang="pt-BR">pt-BR</a>    <a href="/en-US/" hreflang="en-US">en-US</a>    <a href="/es-419/" hreflang="es-419">es-419</a>  </nav>
+  <p class="footer-line">Software livre (AGPL-3.0). Sem anúncios, sem rastreamento, sem cookies.</p>
+  <p class="footer-line">
+    <a href="/pt-BR/privacy/">Privacidade</a> ·
+    <a href="https://geovannec.github.io/.well-known/security.txt">security.txt</a> ·
+    <a href="https://geovannec.github.io/feed.atom">Feed Atom</a> ·
+    <label for="retro-toggle" class="retro-label">Modo retrô</label>
+  </p>
+</footer>
+</div>
+</body>
+</html>

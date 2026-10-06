@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download — Sovereign Social</title>
+<meta name="description" content="Download Sovereign Social for Windows, macOS and Linux — with checksum and signature verification.">
+<link rel="canonical" href="https://geovannec.github.io/en-US/download/"><link rel="alternate" hreflang="pt-BR" href="https://geovannec.github.io/pt-BR/download/"><link rel="alternate" hreflang="en-US" href="https://geovannec.github.io/en-US/download/"><link rel="alternate" hreflang="es-419" href="https://geovannec.github.io/es-419/download/"><link rel="alternate" hreflang="x-default" href="https://geovannec.github.io/pt-BR/download/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Download — Sovereign Social">
+<meta property="og:description" content="Download Sovereign Social for Windows, macOS and Linux — with checksum and signature verification.">
+<meta property="og:url" content="https://geovannec.github.io/en-US/download/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Changelog" href="https://geovannec.github.io/feed.atom">
+<link rel="alternate" type="application/atom+xml" title="Sovereign Social — Blog" href="https://geovannec.github.io/en-US/blog.atom"></head>
+<body>
+<input type="checkbox" id="retro-toggle" class="retro-toggle" aria-hidden="true">
+<div class="site">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="nav-brand" href="/en-US/">Sovereign&nbsp;Social</a>
+    <ul class="nav-links">
+      <li><a href="/en-US/demo/">Demo</a></li>
+      <li><a href="/en-US/manifesto/">Manifesto</a></li>
+      <li><a href="/en-US/privacy/">Privacy</a></li>
+      <li><a href="/en-US/security/">Security</a></li>
+      <li><a href="/en-US/governance/">Governance</a></li>
+      <li><a href="/en-US/roadmap/">Roadmap</a></li>
+      <li><a href="/en-US/changelog/">Changelog</a></li>
+      <li><a href="/en-US/blog/">Blog</a></li>
+      <li><a href="/en-US/compare/">Compare</a></li>
+      <li><a class="nav-cta" href="/en-US/download/" aria-current="page">Download</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<section class="block">
+  <h1>Download Sovereign Social</h1>
+  <p>Signed desktop binaries. Every release ships SHA256SUMS + cosign bundle — verify before you run.</p>
+</section>
+
+<section class="block" aria-labelledby="os">
+  <h2 id="os">Choose your system</h2>
+  <div class="cards three">
+    <article class="card">
+      <h3>Windows</h3>
+      <p>Signed installer for Windows 10+ (x64). PyInstaller executable.</p>
+      <p><code>SovereignSocial-setup.exe</code></p>
+    </article>
+    <article class="card">
+      <h3>macOS</h3>
+      <p>Disk image for Apple Silicon. Local ad-hoc signature — follow the first-run instructions.</p>
+      <p><code>SovereignSocial.dmg</code> — arm64, macOS 14+</p>
+    </article>
+    <article class="card">
+      <h3>Linux</h3>
+      <p>AppImage and tarball for recent x86_64 distributions.</p>
+      <p><code>SovereignSocial.AppImage</code> / <code>.tar.gz</code></p>
+    </article>
+  </div>
+  <p class="note">This page uses OS detection as progressive enhancement — without JS, all links stay visible.</p>
+</section>
+
+<section class="block" aria-labelledby="verify">
+  <h2 id="verify">Verify before installing</h2>
+  <p>Each release includes SHA256SUMS.txt signed with cosign keyless (CI OIDC identity, recorded in the Rekor transparency log) and a full SBOM.</p>
+  <ol class="steps">
+    <li>Download the binary and SHA256SUMS.txt from the same release.</li>
+    <li>Check the downloaded file&#39;s hash against the manifest.</li>
+    <li>Verify the cosign signature on the manifest.</li>
+    <li>Compare with the SBOM if you need to audit dependencies.</li>
+  </ol>
+  <pre><code>shasum -a 256 SovereignSocial*
+cosign verify-blob --bundle SHA256SUMS.txt.bundle SHA256SUMS.txt</code></pre>
+</section>
+
+<section class="block" aria-labelledby="sbom">
+  <h2 id="sbom">SBOM and provenance</h2>
+  <p>Each release publishes an SBOM (SPDX) with all dependencies and the pipeline&#39;s SLSA provenance — know exactly what you&#39;re installing.</p>
+</section>
+
+<section class="block" aria-labelledby="notes">
+  <h2 id="notes">Release notes</h2>
+  <p>The full release history is in the <a href="/en-US/changelog/">Changelog</a></p>
+</section>
+</main>
+<footer class="site-footer">
+  <nav class="lang-switch" aria-label="Languages">    <a href="/pt-BR/" hreflang="pt-BR">pt-BR</a>    <a href="/en-US/" aria-current="true" hreflang="en-US">en-US</a>    <a href="/es-419/" hreflang="es-419">es-419</a>  </nav>
+  <p class="footer-line">Free software (AGPL-3.0). No ads, no tracking, no cookies.</p>
+  <p class="footer-line">
+    <a href="/en-US/privacy/">Privacy</a> ·
+    <a href="https://geovannec.github.io/.well-known/security.txt">security.txt</a> ·
+    <a href="https://geovannec.github.io/feed.atom">Atom feed</a> ·
+    <label for="retro-toggle" class="retro-label">Retro mode</label>
+  </p>
+</footer>
+</div>
+</body>
+</html>

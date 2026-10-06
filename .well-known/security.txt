@@ -1,0 +1,4 @@
+Contact: https://github.com/geovannec/pnet/security/advisories/new
+Preferred-Languages: pt, en, es
+Policy: https://github.com/geovannec/pnet/blob/main/SECURITY.md
+Canonical: https://geovannec.github.io/.well-known/security.txt
